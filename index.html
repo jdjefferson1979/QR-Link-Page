@@ -3,70 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scan & Select – Your Links</title>
+    <title>Department Forms – Scan & Select</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             margin: 0;
             padding: 20px;
-            background: #f8f9fa;
+            background: #f0f4f8;
             color: #333;
             text-align: center;
         }
         h1 {
-            margin-top: 40px;
-            color: #1a73e8;
+            margin: 40px 0 10px;
+            color: #1a3c5e;
+            font-size: 2.2em;
         }
         p.intro {
-            font-size: 1.1em;
+            font-size: 1.2em;
             max-width: 600px;
-            margin: 0 auto 30px;
+            margin: 0 auto 40px;
+            color: #555;
         }
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            max-width: 400px;
+        .departments {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
             margin: 0 auto;
         }
-        .link-button {
-            background: #1a73e8;
+        .dept-button {
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
-            padding: 16px;
-            border-radius: 8px;
+            padding: 30px 20px;
+            border-radius: 12px;
             text-decoration: none;
-            font-size: 1.1em;
-            font-weight: 500;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-            transition: background 0.2s;
+            font-size: 1.4em;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 140px;
         }
-        .link-button:hover {
-            background: #0d65d6;
+        .dept-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
+        .dept-button:nth-child(2) { background: linear-gradient(135deg, #ff7e5f, #feb47b); }
+        .dept-button:nth-child(3) { background: linear-gradient(135deg, #2193b0, #6dd5ed); }
+        .dept-button:nth-child(4) { background: linear-gradient(135deg, #56ab2f, #a8e063); }
+        /* Add more nth-child for additional departments if needed */
         .footer {
             margin-top: 60px;
-            font-size: 0.9em;
-            color: #666;
+            font-size: 0.95em;
+            color: #777;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to James' Test Page!</h1>
-    <p class="intro">You scanned the QR code — now choose a link below to view, edit, or fill it out.</p>
+    <h1>Choose Your Department</h1>
+    <p class="intro">You scanned the QR code — select your department to access forms, documents, and shared resources.</p>
 
-    <div class="Forms">
-        <a href="https://form.jotform.com/260274391979066" target="_blank" class="link-button">
-            → Request for a digital audio copy
-        </a>
-        <a href="https://forms.google.com/your-form-link-here/viewform" target="_blank" class="link-button">
-            → Fill Out Feedback Form
-        </a>
-        <a href="https://docs.google.com/spreadsheets/d/INSERT_SHEET_ID_HERE/edit" target="_blank" class="link-button">
-            → Edit Shared Spreadsheet
-        </a>
-        <!-- Add more buttons here as needed -->
+    <div class="departments">
+        <a href="hr.html" class="dept-button">HR</a>
+        <a href="sales.html" class="dept-button">Sales</a>
+        <a href="it.html" class="dept-button">IT / Tech Support</a>
+        <a href="finance.html" class="dept-button">Finance</a>
+        <!-- Add more like this: <a href="marketing.html" class="dept-button">Marketing</a> -->
     </div>
 
-    <p class="footer">Powered by GitHub Pages • Created for quick QR access</p>
+    <p class="footer">Company Forms Portal • Powered by GitHub Pages</p>
 </body>
 </html>
